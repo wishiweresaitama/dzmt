@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "dzmt"
+version = "0.1.0"
+description = ""
+authors = ["Saitama- <wishiweresaitama@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "dzmt" },
+    { include = "tools", from = "package" }
+]
+include = [
+    "package/*"
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rich = "^14.0.0"
+click = "^8.1.8"
+toml = "^0.10.2"
+pydantic = "^2.11.3"
+keyboard = "^0.13.5"
+yapbol = "^0.2"
+
+[tool.poetry.scripts]
+dzmt = "dzmt.main:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
